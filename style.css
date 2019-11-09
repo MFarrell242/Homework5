@@ -1,0 +1,17 @@
+.time {
+    background-color: beige;
+    border-width: 3px;
+    border-color: black;
+    height: 120px;
+}
+button {
+    height: 40px;
+    display: block;
+    float: right;
+}
+p {
+    height: 20px;
+}
+.dropdown {
+    margin-right: 5px;
+}
