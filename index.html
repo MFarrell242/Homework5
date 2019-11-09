@@ -14,7 +14,16 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://momentjs.com/downloads/moment.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,90 +32,119 @@
         <div class="row">
             <!--dropdown for date-->
             <!--why is dropdowns hard-->
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Year</button>
-            </div>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Month</button>
-            </div>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Day</button>
+            <div class="col-6">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Year</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" type="button">2019</button>
+                        <!--make js to populate this with years I guess, this year minus one plus 98, total 100 years?-->
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Month</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" type="button" value="1">January - 01</button>
+                        <button class="dropdown-item" type="button" value="2">February - 02</button>
+                        <button class="dropdown-item" type="button" value="3">March - 03</button>
+                        <button class="dropdown-item" type="button" value="4">April - 04</button>
+                        <button class="dropdown-item" type="button" value="5">May - 05</button>
+                        <button class="dropdown-item" type="button" value="6">June - 06</button>
+                        <button class="dropdown-item" type="button" value="7">July - 07</button>
+                        <button class="dropdown-item" type="button" value="8">August - 08</button>
+                        <button class="dropdown-item" type="button" value="9">September - 09</button>
+                        <button class="dropdown-item" type="button" value="10">October - 10</button>
+                        <button class="dropdown-item" type="button" value="11">November - 11</button>
+                        <button class="dropdown-item" type="button" value="12">December - 12</button>
+                    </div>
+                    <!--this is some real wet code but oh well, it'll do-->
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Day</button>
+                </div>
             </div>
             <div>
-                <h4>Today's Date:</h4><h4 id="today"></h4><h4>Looking at:</h4><h4 id="working"></h4>
+                <h4 class="d-inline">Today's Date:</h4>
+                <h4 class="d-inline" id="today"></h4>
+                <br>
+                <h4 class="d-inline">Looking at:</h4>
+                <h4 class="d-inline" id="working"></h4>
             </div>
         </div>
         <div class="row time rounded border border-dark" id="9am">
             <!--9am-->
-            <p class="text-center p-0 m-0">9am-10am</p>
+            <button class="btn col-2 btn-secondary">9am-10am</button>
             <!--why is this so TAAALLLLLLL-->
-            <div class="col-11 rounded border border-secondary">
-                <p class="event"></p>
+            <div class="col-10 rounded border border-secondary">
+                <!-- <p class="event"></p> -->
+                barf
             </div>
-            <button class="btn btn-secondary float-right">Edit</button>
+            
         </div>
         <div class="row time rounded border border-dark" id="10am">
             <!--10am-->
-            <p class="text-center p-0 m-0">10am-11am</p>
+            <button class="btn col-2 btn-secondary">10am-11am</button>
             <!--why is this so TAAALLLLLLL-->
-            <div class="col-11 rounded border border-secondary">
+            <div class="col-10 rounded border border-secondary">
                 <p class="event"></p>
             </div>
-            <button class="btn btn-secondary float-right">Edit</button>
+            
         </div>
         <div class="row time rounded border border-dark" id="11am">
             <!--11am-->
-            <p class="text-center p-0 m-0">11am-12pm</p>
+            <button class="btn col-2 btn-secondary">11am-12pm</button>
             <!--why is this so TAAALLLLLLL-->
-            <div class="col-11 rounded border border-secondary">
+            <div class="col-10 rounded border border-secondary">
                 <p class="event"></p>
             </div>
-            <button class="btn btn-secondary float-right">Edit</button>
+            
         </div>
         <div class="row time rounded border border-dark" id="12am">
             <!--12pm-->
-            <p class="text-center p-0 m-0">12pm-1pm</p>
+            <button class="btn col-2 btn-secondary">12pm-1pm</button>
             <!--why is this so TAAALLLLLLL-->
-            <div class="col-11 rounded border border-secondary">
+            <div class="col-10 rounded border border-secondary">
                 <p class="event"></p>
             </div>
-            <button class="btn btn-secondary float-right">Edit</button>
+            
         </div>
         <div class="row time rounded border border-dark" id="1pm">
             <!--1pm-->
-            <p class="text-center p-0 m-0">1pm-2pm</p>
+            <button class="btn col-2 btn-secondary">1pm-2pm</button>
             <!--why is this so TAAALLLLLLL-->
-            <div class="col-11 rounded border border-secondary">
+            <div class="col-10 rounded border border-secondary">
                 <p class="event"></p>
             </div>
-            <button class="btn btn-secondary float-right">Edit</button>
+            
         </div>
         <div class="row time rounded border border-dark" id="2pm">
             <!--2pm-->
-            <p class="text-center p-0 m-0">2pm-3pm</p>
+            <button class="btn col-2 btn-secondary">2pm-3pm</button>
             <!--why is this so TAAALLLLLLL-->
-            <div class="col-11 rounded border border-secondary">
+            <div class="col-10 rounded border border-secondary">
                 <p class="event"></p>
             </div>
-            <button class="btn btn-secondary float-right">Edit</button>
+            
         </div>
         <div class="row time rounded border border-dark" id="3pm">
             <!--3pm-->
-            <p class="text-center p-0 m-0">3pm-4pm</p>
+            <button class="btn col-2 btn-secondary">3pm-4pm</button>
             <!--why is this so TAAALLLLLLL-->
-            <div class="col-11 rounded border border-secondary">
+            <div class="col-10 rounded border border-secondary">
                 <p class="event"></p>
             </div>
-            <button class="btn btn-secondary float-right">Edit</button>
+            
         </div>
         <div class="row time rounded border border-dark" id="4pm">
             <!--4pm-->
-            <p class="text-center p-0 m-0">4pm-5pm</p>
+            <button class="btn col-2 btn-secondary">4pm-5pm</button>
             <!--why is this so TAAALLLLLLL-->
-            <div class="col-11 rounded border border-secondary">
+            <div class="col-10 rounded border border-secondary">
                 <p class="event"></p>
             </div>
-            <button class="btn btn-secondary float-right">Edit</button>
+            
         </div>
 
     </div>
