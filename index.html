@@ -37,7 +37,9 @@
                     <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">Year</button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button class="dropdown-item" type="button">2019</button>
+                        <button class="dropdown-item Yr" type="button" value="2019">2019</button>
+                        <button class="dropdown-item Yr" type="button" value="2020">2020</button>
+                        <button class="dropdown-item Yr" type="button" value="2021">2021</button>
                         <!--make js to populate this with years I guess, this year minus one plus 98, total 100 years?-->
                     </div>
                 </div>
@@ -45,25 +47,29 @@
                     <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">Month</button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button class="dropdown-item" type="button" value="1">January - 01</button>
-                        <button class="dropdown-item" type="button" value="2">February - 02</button>
-                        <button class="dropdown-item" type="button" value="3">March - 03</button>
-                        <button class="dropdown-item" type="button" value="4">April - 04</button>
-                        <button class="dropdown-item" type="button" value="5">May - 05</button>
-                        <button class="dropdown-item" type="button" value="6">June - 06</button>
-                        <button class="dropdown-item" type="button" value="7">July - 07</button>
-                        <button class="dropdown-item" type="button" value="8">August - 08</button>
-                        <button class="dropdown-item" type="button" value="9">September - 09</button>
-                        <button class="dropdown-item" type="button" value="10">October - 10</button>
-                        <button class="dropdown-item" type="button" value="11">November - 11</button>
-                        <button class="dropdown-item" type="button" value="12">December - 12</button>
+                        <button class="dropdown-item Mo" type="button" value="1">January - 01</button>
+                        <button class="dropdown-item Mo" type="button" value="2">February - 02</button>
+                        <button class="dropdown-item Mo" type="button" value="3">March - 03</button>
+                        <button class="dropdown-item Mo" type="button" value="4">April - 04</button>
+                        <button class="dropdown-item Mo" type="button" value="5">May - 05</button>
+                        <button class="dropdown-item Mo" type="button" value="6">June - 06</button>
+                        <button class="dropdown-item Mo" type="button" value="7">July - 07</button>
+                        <button class="dropdown-item Mo" type="button" value="8">August - 08</button>
+                        <button class="dropdown-item Mo" type="button" value="9">September - 09</button>
+                        <button class="dropdown-item Mo" type="button" value="10">October - 10</button>
+                        <button class="dropdown-item Mo" type="button" value="11">November - 11</button>
+                        <button class="dropdown-item Mo" type="button" value="12">December - 12</button>
                     </div>
-                    <!--this is some real wet code but oh well, it'll do-->
+                    <!--this is some real wet code but oh well, it'll do for now-->
                 </div>
                 <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                    <button class="btn btn-primary dropdown-toggle daysMenu" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">Day</button>
+                    <div class="dropdown-menu days" aria-labelledby="dropdownMenuButton">
+
+                    </div>
                 </div>
+                <button class="btn btn-success" id="newDate">Go</button>
             </div>
             <div>
                 <h4 class="d-inline">Today's Date:</h4>
@@ -71,6 +77,11 @@
                 <br>
                 <h4 class="d-inline">Looking at:</h4>
                 <h4 class="d-inline" id="working"></h4>
+                <br>
+                <h4 class="d-inline">Nav to:</h4>
+                <h4 class="d-inline" id="goto1"> MM</h4>
+                <h4 class="d-inline" id="goto2">/ DD</h4>
+                <h4 class="d-inline" id="goto3">/ YYYY</h4>
             </div>
         </div>
         <div class="row time rounded border border-dark" id="9am">
@@ -79,7 +90,6 @@
             <!--why is this so TAAALLLLLLL-->
             <div class="col-10 rounded border border-secondary">
                 <!-- <p class="event"></p> -->
-                barf
             </div>
             
         </div>
@@ -88,7 +98,6 @@
             <button class="btn col-2 btn-secondary">10am-11am</button>
             <!--why is this so TAAALLLLLLL-->
             <div class="col-10 rounded border border-secondary">
-                <p class="event"></p>
             </div>
             
         </div>
@@ -97,7 +106,6 @@
             <button class="btn col-2 btn-secondary">11am-12pm</button>
             <!--why is this so TAAALLLLLLL-->
             <div class="col-10 rounded border border-secondary">
-                <p class="event"></p>
             </div>
             
         </div>
@@ -106,7 +114,6 @@
             <button class="btn col-2 btn-secondary">12pm-1pm</button>
             <!--why is this so TAAALLLLLLL-->
             <div class="col-10 rounded border border-secondary">
-                <p class="event"></p>
             </div>
             
         </div>
@@ -115,7 +122,6 @@
             <button class="btn col-2 btn-secondary">1pm-2pm</button>
             <!--why is this so TAAALLLLLLL-->
             <div class="col-10 rounded border border-secondary">
-                <p class="event"></p>
             </div>
             
         </div>
@@ -124,7 +130,6 @@
             <button class="btn col-2 btn-secondary">2pm-3pm</button>
             <!--why is this so TAAALLLLLLL-->
             <div class="col-10 rounded border border-secondary">
-                <p class="event"></p>
             </div>
             
         </div>
@@ -133,7 +138,6 @@
             <button class="btn col-2 btn-secondary">3pm-4pm</button>
             <!--why is this so TAAALLLLLLL-->
             <div class="col-10 rounded border border-secondary">
-                <p class="event"></p>
             </div>
             
         </div>
@@ -142,7 +146,6 @@
             <button class="btn col-2 btn-secondary">4pm-5pm</button>
             <!--why is this so TAAALLLLLLL-->
             <div class="col-10 rounded border border-secondary">
-                <p class="event"></p>
             </div>
             
         </div>
