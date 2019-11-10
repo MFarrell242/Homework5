@@ -53,6 +53,7 @@ $(newDate).on("click", function(){
         // okay so I think what's happening here is that newDate is being set 
         // BEFORE the days list is filled, which means it's ignored. Hmm. 
         // could get my code wet, but that'd be shit, so no thank you. Bad enough on the months.
+        // this is called event delegation if I can get to this before midnight
     }
 });
 
